@@ -1,0 +1,29 @@
+<form [formGroup]="addForm" (submit)="onSubmit()">
+  <div class="modal-body">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Title</label>
+    <input type="text" class="form-control"
+     [ngClass]="{'is-invalid':subbitted && f.title.errors }"formControlName="title"
+      name="title" id="title" placeholder="Title">
+      <!-- [(ngModel)]="NoteDetials.title" -->
+    <div *ngIf= "subbitted && f.title.errors " class="invalid-feedback">
+      <div  *ngIf= "f.title.errors.required" >Title is required</div>
+    </div>
+  </div>
+
+<div class="form-group">
+  <label for="exampleFormControlTextarea1">Description</label>
+  <textarea   formControlName="description" class="form-control"[ngClass]="{'is-invalid':subbitted && f.description.errors}"
+    rows="10"></textarea>
+    <!--  [(ngModel)]="NoteDetials.description"   -->
+
+  <div *ngIf= "subbitted && f.description.errors " class="invalid-feedback">
+    <div  *ngIf= "f.description.errors.required" >description is required</div>
+</div>
+
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+
+</form>
+

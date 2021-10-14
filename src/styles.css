@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@import "@fortawesome/fontawesome-free/css/all.css";
+ /* regular style toast */
+@import '~ngx-toastr/toastr';
+
+/* @import "bootstrap/dist/css/bootstrap.css"; */
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import 'assets/css/style.css';
+@import 'assets/css/dashboard.css';
+
+
+/* @import url("https://use.fontawesome.com/releases/v5.7.0/css/all.css");
+E:\courses\Angular\Project\Application1\node_modules\bootstrap\dist\css
+*/
+/* E:\courses\Angular\Project\Application1\node_modules\@fortawesome\fontawesome-free */

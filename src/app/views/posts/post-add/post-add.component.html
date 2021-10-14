@@ -1,0 +1,22 @@
+<h2>Add Post</h2>
+
+<form [formGroup]="addForm" (submit)="onSubmit()">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Title</label>
+    <input type="text" class="form-control " [ngClass]="{'is-invalid':subbitted && f.title.errors }"formControlName="title" name="title" id="title" placeholder="Title">
+    <div *ngIf= "subbitted && f.title.errors " class="invalid-feedback">
+      <div  *ngIf= "f.title.errors.required" >Title is required</div>
+    </div>
+  </div>
+
+<!--description  -->
+<div class="form-group">
+  <label for="exampleFormControlTextarea1">Description</label>
+  <textarea class="form-control"[ngClass]="{'is-invalid':subbitted && f.description.errors}" formControlName="description" name="description" id="description" rows="3"></textarea>
+  <div *ngIf= "subbitted && f.description.errors " class="invalid-feedback">
+    <div  *ngIf= "f.description.errors.required" >description is required</div>
+</div>
+
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
